@@ -11,7 +11,8 @@ requirement: itchat
 
 1. git clone https://github.com/modao233/wechat-tool
 2. cd wechat-tool
-3. pip install itchat	![国内镜像使用](https://www.jianshu.com/p/9f9811ffa0d8)
+3. pip install itchat	
+  ![国内镜像使用](https://www.jianshu.com/p/9f9811ffa0d8)
 4. python auto\_reply\_wechat.py
 5. use mobile WeChat scan to login
 
