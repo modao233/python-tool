@@ -17,7 +17,7 @@ _![国内镜像使用](https://www.jianshu.com/p/9f9811ffa0d8)_
 4. python auto\_reply\_wechat.py
 5. use mobile WeChat scan to login
 
-## How can do
+## What can do
 
 1. auto reply to friend
 2. auto reply to group if you had been @
