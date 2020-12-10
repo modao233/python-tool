@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>modao</title>
+	
+<meta name="generator" content="Hexo 5.2.0"></head>
+  <body>
+	
+      
+<link rel="stylesheet" href="/css/navigatebar.css">
+
+
+<div class="navigatebar">
+	<div class="navigatebar-button navigatebar-mine">
+    <a href="/">modao</a>
+	</div>
+	
+	
+        <div class="navigatebar-button">
+          <a href="/">Home</a>
+        </div>
+	
+        <div class="navigatebar-button">
+          <a href="/categories">Categories</a>
+        </div>
+	
+        <div class="navigatebar-button">
+          <a href="/links">Links</a>
+        </div>
+	
+        <div class="navigatebar-button">
+          <a href="/sites">Sites</a>
+        </div>
+	
+        <div class="navigatebar-button">
+          <a href="/project">Project</a>
+        </div>
+	
+</div>
+
+
+<link rel="stylesheet" href="/css/font.css">
+
+
+<link rel="stylesheet" href="/css/post.css" media="screen and (min-width: 600px)">
+
+
+<link rel="stylesheet" href="/css/post_mobile.css" media="screen and (max-width: 600px)">
+
+
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+<div class="content-area">
+	<div class="title">
+		为pip配置国内源
+	</div>
+	
+	<div class="page-date">
+		2019-10-09
+	</div>
+	
+	<div class="category-area">
+		
+			 
+				「
+				<div class="category">
+					<a href="/categories/python">python</a>
+				
+				</div>
+				」
+			
+		
+	</div>
+	
+	<div class="content">
+		<p>对于Python开发的程序员而言，pip 装软件是很重要的环境准备步骤。但由于各种原因，链接官方镜像往往速度不佳，这时，使用国内的镜像不但可以提高下载速度，更可以提高安装成功率，降低安装步骤耗时。</p>
+<a id="more"></a>
+
+<h2 id="一些国内源："><a href="#一些国内源：" class="headerlink" title="一些国内源："></a>一些国内源：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">&#x2F;&#x2F;清华<br>https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple&#x2F;<br><br>&#x2F;&#x2F;山东理工大学<br>https:&#x2F;&#x2F;pypi.sdutlinux.org&#x2F; <br><br>&#x2F;&#x2F;豆瓣<br>https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;<br><br>&#x2F;&#x2F;阿里云<br>https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&#x2F;<br><br>&#x2F;&#x2F;中国科技大学 <br>https:&#x2F;&#x2F;pypi.mirrors.ustc.edu.cn&#x2F;simple&#x2F;<br><br>&#x2F;&#x2F;华中理工大学<br>https:&#x2F;&#x2F;pypi.hustunique.com&#x2F;<br></code></pre></td></tr></table></figure>
+
+<h2 id="单次使用"><a href="#单次使用" class="headerlink" title="单次使用"></a>单次使用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">&#x2F;&#x2F;use<br>pip install -i [使用的源镜像站] [包名]<br><br>&#x2F;&#x2F;example<br>pip install -i https:&#x2F;&#x2F;pypi.mirrors.ustc.edu.cn&#x2F;simple&#x2F; requests<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="持久化配置"><a href="#持久化配置" class="headerlink" title="持久化配置"></a>持久化配置</h2><p>也就是修改配置文件(没有就创建)：</p>
+<ol>
+<li>Linux：~/.pip/pip.conf </li>
+<li>Windows：C:\Users\用户名\pip.ini ，配置环境变量：PATH编辑，添加%HOME%\pip\pip.ini</li>
+</ol>
+<p>配置文件内容：</p>
+<pre><code>[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn</code></pre>
+
+	</div>
+</div>
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;font-size:26px;background-color:#8590a6">
+	<a title="返回顶部" style="color:#04fa9f"><⇧></a>
+</div>
+<script src="/js/totop.js"></script>
+<script>
+    function setClipboardText(event){
+        
+        let clipboardData = event.clipboardData || window.clipboardData;
+        
+        if (!clipboardData) { return; }
+        event.preventDefault();
+        
+        let text = window.getSelection().toString();
+		    
+        if (text) {
+            
+            event.preventDefault();
+            
+            var copyright = '\n\n'
+            + '\n作品采用 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 进行许可'
+            + '\n著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。'
+            + '\n作者: modao'
+            + '\n邮箱: rustacean@aliyun.com'
+            + '\n原文地址: https://modao233.github.io/2019/10/09/python/python-%E4%B8%BApip%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90/'
+			
+            clipboardData.setData('text/plain', text + copyright);
+    
+        }
+    };
+	
+    var contents = document.getElementsByClassName("content-area");
+   
+    contents[0].addEventListener('copy',function(e){
+        setClipboardText(e);
+    });
+
+</script>
+    
+  </body>
+</html>
